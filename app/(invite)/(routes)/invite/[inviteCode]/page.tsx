@@ -23,6 +23,7 @@ const InviteCodePage = async ({
     return redirect("/");
   }
 
+  // check the user if part of the memeber of server
   const existingServer = await db.server.findFirst({
     where: {
       inviteCode: params.inviteCode,
@@ -38,6 +39,7 @@ const InviteCodePage = async ({
     return redirect(`/servers/${existingServer.id}`);
   }
 
+  // join the user to the members
   const server = await db.server.update({
     where: {
       inviteCode: params.inviteCode,
