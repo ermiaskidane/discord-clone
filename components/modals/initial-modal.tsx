@@ -21,7 +21,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage
-} from "@/components/ui/form";
+} from "@/components/ui/form"; 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
@@ -63,7 +63,6 @@ export const InitialModal = () => {
       form.reset();
       router.refresh();
       window.location.reload();
-      console.log("@@@@@@@@@@@@@@@@@@@@@", window.location.reload())
     } catch (error) {
       console.log(error);
     }

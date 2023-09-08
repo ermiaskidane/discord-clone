@@ -21,6 +21,7 @@ const ServerIdLayout = async ({
   const server = await db.server.findUnique({
     where: {
       id: params.serverId,
+      // user have to be member also to request this page
       members: {
         some: {
           profileId: profile.id

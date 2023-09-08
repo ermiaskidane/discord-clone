@@ -52,7 +52,7 @@ export const EditServerModal = () => {
     }
   });
 
-  // we fill the form form the server data
+  // we fill the form from the server data
   useEffect(() => {
     if (server) {
       form.setValue("name", server.name);
