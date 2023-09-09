@@ -54,13 +54,13 @@ export const CreateChannelModal = () => {
   const params = useParams();
 
   const isModalOpen = isOpen && type === "createChannel";
-  // const { channelType } = data;
+  const { channelType } = data;
  
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      type: ChannelType.TEXT,
+      type: channelType || ChannelType.TEXT,
       
       // we can't use the type as string cz type fetchs it value from
       // channeltype prisma the value has to match with it
@@ -68,13 +68,13 @@ export const CreateChannelModal = () => {
     }
   });
 
-  // useEffect(() => {
-  //   if (channelType) {
-  //     form.setValue("type", channelType);
-  //   } else {
-  //     form.setValue("type", ChannelType.TEXT);
-  //   }
-  // }, [channelType, form]);
+  useEffect(() => {
+    if (channelType) {
+      form.setValue("type", channelType);
+    } else {
+      form.setValue("type", ChannelType.TEXT);
+    }
+  }, [channelType, form]);
 
   const isLoading = form.formState.isSubmitting;
 
