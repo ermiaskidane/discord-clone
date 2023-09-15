@@ -18,5 +18,5 @@ export const currentProfilePages = async (req: NextApiRequest) => {
   return profile;
 }
 
-// we use this for the nextjs page folder the other file which is  
-// current-profile only works for nextjs app folders due to the nature of nextjs 13
+// we use this for the nextjs page router the other file which is  
+// current-profile only works for nextjs app router due to the nature of nextjs 13

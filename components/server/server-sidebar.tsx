@@ -127,7 +127,7 @@ export const ServerSidebar = async ({
               sectionType="channels"
               channelType={ChannelType.TEXT}
               role={role}
-              label="Text Channels"
+              label="Text Channel"
             />
             <div className="space-y-[2px]">
               {textChannels.map((channel) => (

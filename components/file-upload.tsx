@@ -62,7 +62,7 @@ export const FileUpload = ({
       </div>
     )
   }
-
+  
   return (
     <UploadDropzone
       endpoint={endpoint}
