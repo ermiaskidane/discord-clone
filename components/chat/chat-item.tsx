@@ -66,6 +66,7 @@ export const ChatItem = ({
   const params = useParams();
   const router = useRouter();
 
+  // when click on member open the conversation page
   const onMemberClick = () => {
     if (member.id === currentMember.id) {
       return;
@@ -165,7 +166,7 @@ export const ChatItem = ({
               />
             </a>
           )}
-          {/* display the image here */}
+          {/* display the pdf here */}
           {isPDF && (
             <div className="relative flex items-center p-2 mt-2 rounded-md bg-background/10">
               <FileIcon className="h-10 w-10 fill-indigo-200 stroke-indigo-400" />
@@ -241,10 +242,10 @@ export const ChatItem = ({
           )}
           <ActionTooltip label="Delete">
             <Trash
-              // onClick={() => onOpen("deleteMessage", { 
-              //   apiUrl: `${socketUrl}/${id}`,
-              //   query: socketQuery,
-              //  })}
+              onClick={() => onOpen("deleteMessage", { 
+                apiUrl: `${socketUrl}/${id}`,
+                query: socketQuery,
+               })}
               className="cursor-pointer ml-auto w-4 h-4 text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition"
             />
           </ActionTooltip>
