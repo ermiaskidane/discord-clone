@@ -62,7 +62,7 @@ export const ChatMessages = ({
     paramKey,
     paramValue,
   });
-  // dealt to do the action on real time power of socketIo( no wait time )
+  // dealt to do the action on real time power of socketIo( no wait time to load the data)
   useChatSocket({ queryKey, addKey, updateKey });
   // automatic scrolling
   useChatScroll({
